@@ -1,12 +1,25 @@
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import Header from "./Header"
+import Login from "./Login"
+import { useStateValue } from "./StateProvider"
 
 function App() {
   return (
     <Router>
-      <div className="app">
-        <h1>Rental Web Application</h1>
-      </div>
+        <Routes>
+          <Route path="/" element= {
+            <Header />
+          } />
+          <Route path="/Checkout" element= {
+            <main>
+              <p>Checkout Page</p>
+            </main>
+          } />
+          <Route path="/Login" element= {
+            <Login />
+          } />
+        </Routes>
     </Router>
 
   );
