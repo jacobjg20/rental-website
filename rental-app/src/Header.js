@@ -7,8 +7,7 @@ function Header(){
 
   return (
     <nav className="header">
-      <h1>This is where the nav bar will go in the future</h1>
-      <img src={logo} alt="Logo" />
+      <p>This is where the nav bar will go in the future</p>
     </nav>
   )
 }
