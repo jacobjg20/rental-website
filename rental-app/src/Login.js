@@ -13,7 +13,7 @@ function Login(){
 
     auth.signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        navigate.push('/');
+        navigate('/checkout');
       })
       .catch((e) => alert(e.message))
   };
@@ -37,10 +37,10 @@ function Login(){
           <input value={email} onChange={event => setEmail(event.target.value)} type="email"/>
           <h5>Password</h5>
           <input value={password} onChange={event => setPassword(event.target.value)} type="password"/>
-          <button>Sign In</button>
+          <button onClick={login} className="login-loginButton">Sign In</button>
         </form>
 
-        <button>Create your Rental Account</button>
+        <button onClick={register} className="login_registerButton">Create your Rental Account</button>
       </div>
     </div>
   )

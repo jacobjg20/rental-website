@@ -9,7 +9,7 @@ import house3 from './images/house3.jpg';
 function Home(){
   return(
     <div className="Home">
-      <h1>Home Component</h1>
+      <h1>Tampa Bay Homes</h1>
       <Listing
         img = {house1}
         price = "1,300,000"
