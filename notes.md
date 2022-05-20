@@ -15,7 +15,7 @@ Technologies
 To-do
   * build out and design nav bar
 
-  * Send doc to the database
+  * retreive documents from firebase
 
 notes
 
