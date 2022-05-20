@@ -1,4 +1,4 @@
-import './App.css';
+import './css/App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Header from "./Header"
 import Login from "./Login"
@@ -16,12 +16,18 @@ function App() {
             </div>
           } />
           <Route path="/Checkout" element= {
-            <main>
-              <p>Checkout Page</p>
-            </main>
+            <div>
+              <Header />
+              <main>
+                <p>Checkout Page</p>
+              </main>
+            </div>
           } />
           <Route path="/Login" element= {
-            <Login />
+            <div>
+              <Header />
+              <Login />
+            </div>
           } />
         </Routes>
     </Router>

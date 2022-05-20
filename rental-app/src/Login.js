@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
-import './Login.css';
+import './css/Login.css';
 import { Link, useNavigate } from "react-router-dom";
-import { auth } from './Firebase';
+import { auth, db } from './Firebase';
+// import { addDoc, collection } from "firebase/firestore";
 
 function Login(){
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // const docRef = addDoc(collection(db, "Listings"), {
+  //   first: "Alan",
+  //   middle: "Mathison",
+  //   last: "Turing",
+  //   born: 1912
+  // });
+
   const login = (event) => {
     event.preventDefault();
 
     auth.signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        navigate('/checkout');
+        navigate('/');
       })
       .catch((e) => alert(e.message))
   };
@@ -23,10 +31,22 @@ function Login(){
 
     auth.createUserWithEmailAndPassword(email, password)
     .then(auth => {
-      navigate.push('/');
+      navigate('/');
     })
     .catch((e) => alert(e.message));
   };
+
+  const logout = (event) => {
+    event.preventDefault();
+
+    auth.signOut()
+    .then(function() {
+      console.log('signed out')
+    })
+    .catch(function(error) {
+      // An error happened
+    });
+  }
 
   return (
     <div className="login">
@@ -38,6 +58,7 @@ function Login(){
           <h5>Password</h5>
           <input value={password} onChange={event => setPassword(event.target.value)} type="password"/>
           <button onClick={login} className="login-loginButton">Sign In</button>
+          <button onClick={logout} className="login-loginButton">Logout</button>
         </form>
 
         <button onClick={register} className="login_registerButton">Create your Rental Account</button>

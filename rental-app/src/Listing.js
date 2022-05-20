@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Listing.css";
+import "./css/Listing.css";
 
 function Listing({img, price, address, zipCode, beds, baths }){
  return (

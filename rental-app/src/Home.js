@@ -1,15 +1,15 @@
 import React from 'react';
-import "./Home.css";
+import "./css/Home.css";
 import Listing from "./Listing";
 import house1 from './images/house1.jpg';
 import house2 from './images/house2.jpg';
 import house3 from './images/house3.jpg';
 
-
 function Home(){
+
   return(
     <div className="Home">
-      <h1>Tampa Bay Homes</h1>
+      <h1>Tampa Bay Homes User: </h1>
       <Listing
         img = {house1}
         price = "1,300,000"
