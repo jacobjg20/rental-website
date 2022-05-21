@@ -2,28 +2,11 @@ import React, { useState } from 'react';
 import './css/Login.css';
 import { Link, useNavigate } from "react-router-dom";
 import { auth, db } from './Firebase';
-import { collection, getDocs } from "firebase/firestore";
-
-// import { addDoc, collection } from "firebase/firestore";
 
 function Login(){
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  (async function (){
-    const querySnapshot = await getDocs(collection(db, "Listings"));
-    querySnapshot.forEach((doc) => {
-      console.log(JSON.stringify(doc.data())) 
-    });
-  })();
-
-  // const docRef = addDoc(collection(db, "Listings"), {
-  //   first: "Alan",
-  //   middle: "Mathison",
-  //   last: "Turing",
-  //   born: 1912
-  // });
 
   const login = (event) => {
     event.preventDefault();

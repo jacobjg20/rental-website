@@ -15,7 +15,7 @@ Technologies
 To-do
   * build out and design nav bar
 
-  * retreive documents from firebase
+  * make home page display all listings in firebase
 
 notes
 
