@@ -13,9 +13,14 @@ Technologies
   * react-app
 
 To-do
-  * build out and design nav bar
 
-  * make home page display all listings in firebase
+  * connect to MongoDB
+
+  * Create sample listings in MongoDB
+
+  * make home page display all listings in MongoDB
+
+  * build out and design nav bar
 
 notes
 
@@ -23,6 +28,7 @@ notes
 
 Resources
   * https://reactrouter.com/docs/en/v6/getting-started/tutorial
+  * MongoDB https://www.youtube.com/watch?v=KKyag6t98g8&ab_channel=TraversyMedia
   * amazon clone https://www.youtube.com/watch?v=1_IYL9ZMR_Y&t=14430s&ab_channel=CleverProgrammer
 
 Logins:
