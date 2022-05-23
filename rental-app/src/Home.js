@@ -4,8 +4,7 @@ import Listing from "./Listing";
 
 
 function Home(){
-  const [count, setCount] = useState([]);
-
+  const [count, setCount] = useState();
 
   return(
     <div className="Home">

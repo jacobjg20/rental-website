@@ -1,19 +1,10 @@
 import React, { useState } from 'react'
 import './css/Header.css'
 import { useStateValue } from './StateProvider'
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth"
+
 
 function Header(){
   const [email, setEmail] = useState('')
-
-  firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        setEmail(user.email);
-      } else {
-        setEmail('');
-      }
-  });
 
   return (
     <nav className="header">
