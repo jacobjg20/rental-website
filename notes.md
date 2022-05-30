@@ -9,9 +9,6 @@ Technologies
   * MongoDB
   * Express (node js framework)
 
-  * react-router-dom
-  * react-app
-
 To-do
   * recreate app without inizilating react-app framework
 
